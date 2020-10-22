@@ -1,0 +1,34 @@
+extends layouts/main
+include mixins/videoBlock
+
+block content
+    .home-title#htmain
+            span Connect with musicians worldwide and cover...
+    .home-main
+        .home-main__left
+            span#jsSongName
+            span#jsSongArtist
+            span#jsSongTitle
+        .home-main__right
+            span#jsSongCover
+    .home-title
+        span I am...
+    .home-chooseInstrument  
+        a(href=routes.vocal).home-chooseInstrument__column#vocal
+            span Vocal
+        a(href=routes.guitar).home-chooseInstrument__column#guitar
+            span Guitar
+        a(href=routes.bass).home-chooseInstrument__column#bass
+            span Bass
+        a(href=routes.drum).home-chooseInstrument__column#drum
+            span Drum
+    .home-title
+        span I am...
+    .home-videos
+        each item in videos
+            +videoBlock({
+                id:item.id,
+                title:item.title,
+                views:item.views,
+                videoFile:item.fileUrl
+            })

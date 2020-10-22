@@ -1,0 +1,14 @@
+.videoBlock {
+  display: flex;
+  flex-direction: row;
+  video {
+    margin-bottom: 10px;
+    height: 20%;
+    width: 20%;
+  }
+  .videoBlock__title {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 10px;
+  }
+}
